@@ -1,260 +1,264 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Brooke Ojemen | Software Engineering Portfolio</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Brooke Ojemen | Data Science & Software Engineering</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg: #0e1116;
-      --panel: #161b22;
-      --muted: #9aa4af;
-      --white: #f2f5f7;
-      --accent: #4f8cff;
-      --border: rgba(255,255,255,0.07);
-    }
+<style>
+  :root{
+    --bg: #f6f8fb;
+    --panel: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --border: rgba(15, 23, 42, 0.08);
+  }
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: Inter, system-ui;
-      background: linear-gradient(180deg, var(--bg), #0b0e12);
-      color: var(--white);
-      padding: 32px;
-      line-height: 1.6;
-      font-size: 16px;
-    }
+  *{box-sizing:border-box}
 
-    .container{
-      max-width: 1050px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 26px;
-    }
+  body{
+    margin:0;
+    font-family: Inter, system-ui;
+    background: var(--bg);
+    color: var(--text);
+    padding: 36px;
+    line-height: 1.65;
+    font-size: 16px;
+  }
 
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
+  a{
+    color: var(--accent);
+    text-decoration:none;
+    font-weight:600;
+  }
 
-    h1,h2,h3{margin:0}
+  .container{
+    max-width: 1050px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+  }
 
-    .btn{
-      border:1px solid var(--border);
-      background: transparent;
-      color: var(--white);
-      padding:10px 14px;
-      border-radius:10px;
-      cursor:pointer;
-      font-weight:600;
-    }
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
 
-    .btn.primary{
-      background: var(--accent);
-      border:none;
-      color:#081018;
-    }
+  .btn{
+    border:1px solid var(--border);
+    background:#fff;
+    color:var(--text);
+    padding:10px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+  }
 
-    /* HERO */
-    .hero{
-      background: rgba(255,255,255,0.03);
-      border:1px solid var(--border);
-      padding:24px;
-      border-radius:14px;
-    }
+  .btn.primary{
+    background: var(--accent);
+    color:white;
+    border:none;
+  }
 
-    .hero h2{
-      font-size:26px;
-      margin-bottom:10px;
-    }
+  /* HERO */
+  .hero{
+    background: var(--panel);
+    border:1px solid var(--border);
+    padding:28px;
+    border-radius:14px;
+  }
 
-    .hero p{
-      color: var(--muted);
-      max-width: 70ch;
-    }
+  .hero h2{
+    margin:0 0 10px 0;
+    font-size:26px;
+  }
 
-    .pills{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
+  .hero p{
+    margin:0;
+    color: var(--muted);
+    max-width: 75ch;
+  }
 
-    .pill{
-      border:1px solid var(--border);
-      padding:6px 10px;
-      border-radius:999px;
-      font-size:13px;
-      color: var(--muted);
-    }
+  .pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:14px;
+  }
 
-    /* SECTIONS */
-    .section-title{
-      font-size:14px;
-      color: var(--muted);
-      margin-bottom:10px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
+  .pill{
+    background:#f3f4f6;
+    border:1px solid var(--border);
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:13px;
+    color: var(--muted);
+  }
 
-    /* GRID */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3,1fr);
-      gap:16px;
-    }
+  .section-title{
+    font-size:13px;
+    color: var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    margin-bottom:10px;
+  }
 
-    .card{
-      background: rgba(255,255,255,0.03);
-      border:1px solid var(--border);
-      padding:16px;
-      border-radius:14px;
-      transition: 0.2s;
-    }
+  /* PROJECTS */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:16px;
+  }
 
-    .card:hover{
-      transform: translateY(-4px);
-      border-color: rgba(79,140,255,0.3);
-    }
+  .card{
+    background: var(--panel);
+    border:1px solid var(--border);
+    padding:16px;
+    border-radius:14px;
+    transition:0.2s;
+  }
 
-    .card p{
-      color: var(--muted);
-      font-size:14px;
-    }
+  .card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(37, 99, 235, 0.3);
+  }
 
-    .tags{
-      display:flex;
-      gap:6px;
-      flex-wrap:wrap;
-      margin-top:10px;
-    }
+  .card p{
+    color: var(--muted);
+    font-size:14px;
+  }
 
-    .tag{
-      font-size:12px;
-      border:1px solid var(--border);
-      padding:4px 8px;
-      border-radius:8px;
-      color: var(--muted);
-    }
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:10px;
+  }
 
-    a{
-      color: var(--accent);
-      text-decoration:none;
-      font-weight:600;
-    }
+  .tag{
+    font-size:12px;
+    background:#f3f4f6;
+    border:1px solid var(--border);
+    padding:4px 8px;
+    border-radius:8px;
+    color: var(--muted);
+  }
 
-    footer{
-      margin-top:20px;
-      color: var(--muted);
-      font-size:13px;
-    }
+  footer{
+    color: var(--muted);
+    font-size:13px;
+    margin-top:10px;
+  }
 
-    @media(max-width:900px){
-      .grid{grid-template-columns:1fr}
-    }
-  </style>
+  @media(max-width:900px){
+    .grid{grid-template-columns:1fr}
+    body{padding:18px}
+  }
+</style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <!-- HEADER -->
-    <header>
-      <h3>Brooke Ojemen</h3>
-      <div>
-        <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Projects</button>
-        <button class="btn primary" onclick="window.open('RESUME_LINK_HERE','_blank')">Resume</button>
-      </div>
-    </header>
+<header>
+  <h3>Brooke Ojemen</h3>
+  <div style="display:flex;gap:10px;">
+    <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Projects</button>
+    <button class="btn primary" onclick="window.open('RESUME.pdf','_blank')">Resume</button>
+  </div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h2>Computer Science Student & Aspiring Software Engineer</h2>
+<!-- HERO -->
+<section class="hero">
+  <h2>Data Science & Software Engineering Student</h2>
+  <p>
+    I build data-driven applications and software tools using Python, Java, and analytical methods.
+    My interests include data science, machine learning foundations, algorithms, and practical software systems.
+  </p>
+
+  <div class="pills">
+    <div class="pill">Python (Data Science)</div>
+    <div class="pill">Java (Software Engineering)</div>
+    <div class="pill">SQL</div>
+    <div class="pill">Machine Learning (Learning)</div>
+    <div class="pill">Open to Internships</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <div class="section-title">About</div>
+  <p style="color:var(--muted); max-width:75ch;">
+    I am a computer science student focused on data science and software engineering.
+    I enjoy analyzing datasets, building tools that automate workflows, and implementing algorithms that connect theory to real-world applications.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-title">Projects</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Air Hockey Game</h3>
       <p>
-        I build software projects in Java and Python with a focus on algorithms, backend systems, and practical applications.
-        I enjoy turning technical concepts into working tools and learning through hands-on development.
+        Built a JavaFX-based interactive game with real-time physics, collision detection, scoring system, and simple AI opponent.
       </p>
-
-      <div class="pills">
-        <div class="pill">Java</div>
-        <div class="pill">Python</div>
-        <div class="pill">Data Structures & Algorithms</div>
-        <div class="pill">Open to Internships</div>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">JavaFX</span>
       </div>
-    </section>
+      <p><a href="https://github.com/YOUR_USERNAME/air-hockey" target="_blank">GitHub →</a></p>
+    </div>
 
-    <!-- ABOUT -->
-    <section>
-      <div class="section-title">About</div>
-      <p style="color:var(--muted); max-width:75ch;">
-        I’m a CS student focused on building practical software systems and improving my understanding of core computer science concepts.
-        Most of my experience comes from personal projects where I explore algorithms, automation tools, and small applications.
+    <div class="card">
+      <h3>Data Analysis Dashboard</h3>
+      <p>
+        Performed exploratory data analysis on real datasets using Python (Pandas, Matplotlib) to identify trends and insights.
       </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="section-title">Projects</div>
-
-      <div class="grid">
-
-        <div class="card">
-          <h3>Air Hockey Game</h3>
-          <p>
-            JavaFX-based 2D air hockey game featuring collision physics, scoring logic, and a simple AI opponent.
-          </p>
-          <div class="tags">
-            <span class="tag">Java</span>
-            <span class="tag">JavaFX</span>
-          </div>
-          <p><a href="GITHUB_LINK_HERE" target="_blank">GitHub →</a></p>
-        </div>
-
-        <div class="card">
-          <h3>Portfolio Website</h3>
-          <p>
-            Designed and built a responsive personal portfolio to showcase projects and technical skills with a clean UI.
-          </p>
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <p><a href="GITHUB_LINK_HERE" target="_blank">GitHub →</a></p>
-        </div>
-
-        <div class="card">
-          <h3>CLI Productivity Tool</h3>
-          <p>
-            Command-line tool that automates project setup and reduces initialization time using templates and scripts.
-          </p>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">CLI</span>
-          </div>
-          <p><a href="GITHUB_LINK_HERE" target="_blank">GitHub →</a></p>
-        </div>
-
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">Data Viz</span>
       </div>
-    </section>
+      <p><a href="https://github.com/YOUR_USERNAME/data-analysis" target="_blank">GitHub →</a></p>
+    </div>
 
-    <!-- SKILLS -->
-    <section>
-      <div class="section-title">Skills</div>
-      <p style="color:var(--muted)">
-        Java • Python • JavaScript • Git • SQL (learning) • REST APIs • Data Structures & Algorithms
+    <div class="card">
+      <h3>CLI Automation Tool</h3>
+      <p>
+        Built a Python CLI tool that automates project setup and reduces initialization time using reusable templates.
       </p>
-    </section>
-
-    <footer>
-      Contact: <a href="mailto:brooke.ojemen@gmail.com">brooke.ojemen@gmail.com</a>
-    </footer>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">CLI</span>
+        <span class="tag">Automation</span>
+      </div>
+      <p><a href="https://github.com/YOUR_USERNAME/cli-tool" target="_blank">GitHub →</a></p>
+    </div>
 
   </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <div class="section-title">Skills</div>
+  <p style="color:var(--muted)">
+    Python • Java • SQL • Pandas • NumPy • Data Visualization • Git • Algorithms • Object-Oriented Programming
+  </p>
+</section>
+
+<!-- CONTACT -->
+<footer>
+  Contact: <a href="mailto:brooke.ojemen@gmail.com">brooke.ojemen@gmail.com</a>
+</footer>
+
+</div>
 </body>
 </html>
