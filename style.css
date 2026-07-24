@@ -411,12 +411,59 @@ footer {
   background: var(--line-soft);
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
+.proj-timeline {
   padding-bottom: 30px;
 }
+
+.proj-item {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 30px;
+}
+.proj-item:last-child { padding-bottom: 0; }
+
+.proj-rail {
+  flex: 0 0 14px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.proj-rail::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: -30px;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: var(--line);
+}
+.proj-item:last-child .proj-rail::before { display: none; }
+
+.proj-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  margin-top: 5px;
+  z-index: 1;
+}
+.proj-item.ml    .proj-dot { border-color: var(--teal); }
+.proj-item.stats .proj-dot { border-color: var(--violet); }
+.proj-item.de    .proj-dot { border-color: var(--coral); }
+.proj-item.viz   .proj-dot { border-color: var(--gold); }
+
+.proj-main { flex: 1; min-width: 0; }
+.proj-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+
+.proj-item[hidden] { display: none; }
 
 .project-card {
   background: var(--paper-raise);
@@ -453,12 +500,6 @@ footer {
   color: var(--ink);
 }
 .card-title .glyph { color: var(--ink-faint); font-weight: 400; }
-.card-date {
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  color: var(--ink-faint);
-  margin-top: 2px;
-}
 .card-cat {
   font-family: var(--font-mono);
   font-size: 10.5px;
@@ -505,16 +546,15 @@ footer {
 }
 .card-links a:hover { color: var(--teal); }
 
-.project-card[hidden] { display: none; }
-
 /* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 720px) {
-  .focus-grid, .project-grid { grid-template-columns: 1fr; }
+  .focus-grid { grid-template-columns: 1fr; }
   .nav-links { gap: 18px; }
   section { padding: 46px 0; }
   .terminal-body { font-size: 13.5px; }
+  .proj-item { gap: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
